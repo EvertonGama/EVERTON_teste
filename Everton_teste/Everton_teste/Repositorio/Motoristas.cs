@@ -35,7 +35,7 @@ namespace Everton_teste.Repositorio
         {
             string query = @"
                         insert into Motoristas(Nome, DataNascimento, CPF, ModeloCarro, Sexo, Status)
-                        VALUES('" + novo.Nome + "', '" + novo.DataNascimento.ToString("dd-MM-yyyy") + "', '" + novo.CPF + "','" + novo.Modelo + "', '" + novo.Sexo + "', '" + novo.Status + "')";
+                        VALUES('" + novo.Nome + "', '" + novo.DataNascimento.ToString("yyyy/MM/dd") + "', '" + novo.CPF + "','" + novo.Modelo + "', '" + novo.Sexo + "', '" + novo.Status + "')";
 
             string conection = System.Configuration.ConfigurationManager.ConnectionStrings["myContext"].ConnectionString;
             using (SqlConnection connection = new SqlConnection(conection))

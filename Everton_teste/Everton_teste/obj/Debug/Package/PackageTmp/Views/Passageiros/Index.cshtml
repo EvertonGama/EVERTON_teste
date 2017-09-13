@@ -1,0 +1,38 @@
+﻿@model List<Everton_teste.Models.Passageiros_Grid>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Everton - Corridas Compartilhadas</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-2">
+        <a href="/Passageiros/Novo" id="add" name="add">Adicionar</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <table>
+            <thead>
+                <tr>
+                    <th>Codigo</th>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Codigo</td>
+                        <td>@item.Nome</td>
+                        <td>@item.CPF</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
